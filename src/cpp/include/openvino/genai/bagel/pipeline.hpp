@@ -49,7 +49,8 @@ struct BagelPerfMetrics {
 class OPENVINO_GENAI_EXPORTS BagelPipeline {
 public:
     /**
-     * @param models_dir directory with the BAGEL IRs and bagel_ov_config.json
+     * @param models_dir directory with the BAGEL IRs and either bagel_ov_config.json
+     *                   (dynamic export) or bagel_openvino_config.json (optimum-intel export)
      * @param device inference device
      * @param tokenizer_dir directory with openvino_tokenizer.xml / openvino_detokenizer.xml; models_dir if empty
      * @param properties applied on top of the default per-model configuration
